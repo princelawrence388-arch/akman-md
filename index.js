@@ -23,7 +23,7 @@ app.get('/health', (_req, res) => res.json({ ok: true }));
 app.listen(PORT, () => console.log(`${BOT_NAME} portal listening on ${PORT}`));
 
 const bot = new Telegraf(TOKEN);
-bot.use(session());
+
 bot.use(session({
   defaultSession: () => ({})
 }));
