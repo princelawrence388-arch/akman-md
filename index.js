@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 if (!TOKEN) throw new Error('TELEGRAM_BOT_TOKEN is required');
-bot.use(session());
+
 const BOT_NAME = process.env.BOT_NAME || 'AKMAN MD';
 const CHANNEL_URL = process.env.CHANNEL_URL || '';
 const PORT = Number(process.env.PORT || 3000);
